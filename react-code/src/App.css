@@ -1,0 +1,164 @@
+.Main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.Main .timer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.Main .timer div {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 350px;
+  cursor: pointer;
+  height: 250px;
+  background-color: #000;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 10rem;
+  letter-spacing: 20px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  box-shadow: -4px 19px 20px 3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -4px 19px 20px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px 19px 20px 3px rgba(0, 0, 0, 0.75);
+}
+
+.Main .timer div:hover {
+  background-color: white;
+  color: #000;
+}
+
+.Main .timer div span {
+  font-size: 2rem;
+  margin-top: -40px;
+  letter-spacing: 2px;
+}
+
+.Main .timer .init {
+  margin-top: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Main .timer .init button {
+  border: none;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+  outline: none;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.Main .timer .init button:after {
+  content: "";
+  background: #000;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.Main .timer .init button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.Main .timer .init .start {
+  background-color: #4CAF50;
+}
+
+.Main .timer .init .reset {
+  background-color: #f44336;
+}
+
+.Main .timer .init .pause {
+  background-color: grey;
+  color: black;
+}
+
+@media screen and (max-width: 1156px) {
+  .Main .timer div {
+    width: 250px;
+    height: 150px;
+    font-size: 5rem;
+    letter-spacing: 10px;
+  }
+  .Main .timer div span {
+    font-size: 1.5rem;
+    margin-top: -30px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 831px) {
+  .Main .timer div {
+    width: 200px;
+    height: 100px;
+    font-size: 3rem;
+    letter-spacing: 5px;
+  }
+  .Main .timer div span {
+    font-size: 1rem;
+    margin-top: -20px;
+  }
+}
+
+@media screen and (max-width: 663px) {
+  .Main .timer div {
+    width: 150px;
+    height: 100px;
+    font-size: 3rem;
+    letter-spacing: 5px;
+  }
+}
+
+@media screen and (max-width: 517px) {
+  .Main .timer div {
+    width: 130px;
+    height: 100px;
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+}
+/*# sourceMappingURL=App.css.map */

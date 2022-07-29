@@ -1,0 +1,162 @@
+.Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+
+    .timer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        div {
+            display: grid;
+            place-items: center;
+            width: 350px;
+            cursor: pointer;
+            height: 250px;
+            background-color: #000;
+            color:white;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 10rem;
+            letter-spacing: 20px;
+            transition: all 0.2s linear;
+            box-shadow: -4px 19px 20px 3px rgba(0,0,0,0.75);
+            -webkit-box-shadow: -4px 19px 20px 3px rgba(0,0,0,0.75);
+            -moz-box-shadow: -4px 19px 20px 3px rgba(0,0,0,0.75);
+
+            &:hover {
+                background-color: white;
+                color:#000;
+            }
+
+            span {
+                font-size: 2rem;
+                margin-top: -40px;
+                letter-spacing: 2px;
+            }
+        }
+
+        .init {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            button {
+                border:none;
+                display:inline-block;
+                width: 70px;
+                height: 70px;
+                overflow:hidden;
+                color:white;
+                text-align:center;
+                cursor:pointer;
+                white-space:nowrap;
+                line-height: 70px;
+                border-radius: 50%;
+                margin-right: 10px;
+                outline: none;
+                position: relative;
+                transition-duration: 0.4s;
+
+
+                &:after {
+                    content: "";
+                    background: #000;
+                    display: block;
+                    position: absolute;
+                    padding-top: 300%;
+                    padding-left: 350%;
+                    margin-left: -20px!important;
+                    margin-top: -120%;
+                    opacity: 0;
+                    transition: all 0.8s;
+                }
+                &:active:after {
+                    padding: 0;
+                    margin: 0;
+                    opacity: 1;
+                    transition: 0s
+                }
+
+            }
+            .start {
+                background-color: #4CAF50;
+            }
+            .reset {
+                background-color: #f44336;
+            }
+            .pause {
+                background-color: grey;
+                color:black;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width:1156px) {
+    .Main {
+        .timer {
+            div {
+                width:250px;
+                height:150px;
+                font-size: 5rem;
+                letter-spacing: 10px;
+
+                span {
+                    font-size: 1.5rem;
+                    margin-top: -30px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (max-width:831px) {
+    .Main {
+        .timer {
+            div {
+                width:200px;
+                height:100px;
+                font-size: 3rem;
+                letter-spacing: 5px;
+
+                span {
+                    font-size: 1rem;
+                    margin-top: -20px;
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (max-width:663px) {
+    .Main {
+        .timer {
+            div {
+                width:150px;
+                height:100px;
+                font-size: 3rem;
+                letter-spacing: 5px;
+            }
+        }
+    }    
+}
+
+@media screen and (max-width:517px) {
+    .Main {
+        .timer {
+            div {
+                width:130px;
+                height:100px;
+                font-size: 2rem;
+                letter-spacing: 3px;
+            }
+        }
+    }    
+}
